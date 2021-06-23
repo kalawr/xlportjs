@@ -95,7 +95,7 @@ export const xlPort = (apiKey: string): xlPortJs => ({
     request: ImportRequest = defaultImportRequest,
   ): Promise<ImportResponse> =>
     putPromise({
-      url: 'https://xlport.compute.molnify.com/import',
+      url: 'https://xlport.data2impact.com/import',
       headers: {
         Authorization: 'xlport apikey ' + apiKey,
       },
@@ -124,7 +124,7 @@ export const xlPort = (apiKey: string): xlPortJs => ({
       }),
   exportToFile: (body: ExportBody): Stream =>
     putRequest({
-      url: 'https://xlport.compute.molnify.com/export',
+      url: 'https://xlport.data2impact.com/export',
       headers: {
         Authorization: 'xlport apikey ' + apiKey,
       },
